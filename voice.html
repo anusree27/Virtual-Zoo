@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function speakText() {
+      const text = document.querySelector('body').innerText;
+      const speech = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</head>
+<body>
+  <p>This is the text that will be read out when the button is clicked.</p>
+  <button onclick="speakText()">Read Text</button>
+</body>
+</html>
